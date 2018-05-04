@@ -1,0 +1,18 @@
+h1 {
+    background: pink;
+}
+
+.navbar-custom {
+    height: 100px;
+    color: purple;
+}
+
+.navbar-custom .navbar-brand{
+    color: pink;
+}
+
+.navbar .navbar-middle {
+    /* text-align: center; */
+    justify-content: center;
+    display: flex;
+}
