@@ -1,17 +1,21 @@
-.navbar .navbar-nav > li > a {
-  -webkit-transition: padding-top 0.3s ease;
-  -moz-transition: padding-top 0.3s ease;
-  -ms-transition: padding-top 0.3s ease;
-  -o-transition: padding-top 0.3s ease;
-  transition: padding-top 0.3s ease;
+nav .navbar{
+   transition: all 0.5s ease;
 }
 
 .navbar-custom {
-    height: 100px;
+    padding: 20px 1rem;
+}
+
+.navbar-brand {
+    transition: all 0.5s ease;
 }
 
 .navbar-custom .navbar-brand{
     font-size: 28px;
+}
+
+.nav-link {
+    transition: all 0.5s ease;
 }
 
 .navbar .justify-content-center .nav-link {
@@ -22,4 +26,9 @@
 .navbar .justify-content-end .nav-link {
     font-size: 14px;
     font-weight: 700;
+}
+
+.bg-white {
+    background-color: #ffffff;
+    box-shadow: 0 0.8px 1px -1px #999;
 }
