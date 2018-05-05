@@ -6,8 +6,11 @@ body {
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     background: black;
-    background-image: url("http://www.vlime.co.nz/images/buttons/backgroundimage.jpg");
+    background-image: url("https://78.media.tumblr.com/12b613f4fe7efadad084b893b0eb0e31/tumblr_ok38cbNrOm1qiis88o1_500.gif");
     background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: block;
     float: left;
 }
