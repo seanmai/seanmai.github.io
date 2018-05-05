@@ -47,9 +47,11 @@ body {
 
 }
 
+.about-item:not(.expand):hover{
+    background-color: #ddd;
+}
 .about-item:hover{
     cursor: pointer;
-    background-color: #ddd;
 }
 
 .about-content p{
@@ -70,7 +72,7 @@ body {
     transition: all 0.5s ease;
 }
 
-.about-expanded{
+.about-me-expanded{
     position: absolute;
     z-index: 1;
     visibility: hidden;
@@ -78,21 +80,20 @@ body {
     transition: all 0.5s ease;
 }
 
-.about-expanded .about-header{
+.about-me-expanded .about-header{
     font-size: 50px;
     font-weight: 700;
     text-align: center;
+    margin-bottom: 40px;
 }
 
-.about-expanded{
-
+.about-me-expanded{
     font-size: 28px;
 }
 
 .about-work {
     float: right;
     right: 0;
-
 }
 
 @media only screen and (max-width: 768px){

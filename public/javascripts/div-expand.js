@@ -4,10 +4,10 @@ $(".about-me").on("click", function() {
     setTimeout(function () {
         if($(".about-content").css("visibility")!="hidden"){
             $(".about-content").css({"visibility": "hidden", "opacity": "0"});
-            $(".about-expanded").css({"visibility": "visible", "opacity": "1"});
+            $(".about-me-expanded").css({"visibility": "visible", "opacity": "1"});
         } else{
             $(".about-content").css({"visibility": "visible", "opacity": "1"});
-            $(".about-expanded").css({"visibility": "hidden", "opacity": "0"});
+            $(".about-me-expanded").css({"visibility": "hidden", "opacity": "0"});
         }
     }, 300);
 });
