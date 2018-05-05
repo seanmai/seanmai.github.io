@@ -1,18 +1,25 @@
-h1 {
-    background: pink;
+.navbar .navbar-nav > li > a {
+  -webkit-transition: padding-top 0.3s ease;
+  -moz-transition: padding-top 0.3s ease;
+  -ms-transition: padding-top 0.3s ease;
+  -o-transition: padding-top 0.3s ease;
+  transition: padding-top 0.3s ease;
 }
 
 .navbar-custom {
     height: 100px;
-    color: purple;
 }
 
 .navbar-custom .navbar-brand{
-    color: pink;
+    font-size: 28px;
 }
 
-.navbar .navbar-middle {
-    /* text-align: center; */
-    justify-content: center;
-    display: flex;
+.navbar .justify-content-center .nav-link {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.navbar .justify-content-end .nav-link {
+    font-size: 14px;
+    font-weight: 700;
 }
