@@ -29,7 +29,12 @@ nav .navbar{
 }
 
 .bg-white {
+    transition: all 5s ease;
     background-color: #ffffff;
     box-shadow: 0 0.8px 1px -1px #999;
-    /* padding: 0.3rem 1rem; */
+    padding: 0.3rem 1rem;
+}
+
+.bg-dark {
+    transition: all 5s ease;
 }
