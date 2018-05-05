@@ -31,4 +31,5 @@ nav .navbar{
 .bg-white {
     background-color: #ffffff;
     box-shadow: 0 0.8px 1px -1px #999;
+    padding: 0.3rem 1rem;
 }
