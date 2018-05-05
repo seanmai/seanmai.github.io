@@ -6,7 +6,7 @@ body {
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     background: black;
-    background-image: url("https://78.media.tumblr.com/12b613f4fe7efadad084b893b0eb0e31/tumblr_ok38cbNrOm1qiis88o1_500.gif");
+    background-image: url("http://1.bp.blogspot.com/-HzVaMocQ0Eo/VWouHD8GuHI/AAAAAAAABzc/9kWl4jQ1430/s1600/giphy%2B%25286%2529.gif");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -31,4 +31,37 @@ body {
 
 .about {
 
+}
+
+.about-item {
+    height: 60vh;
+    /* display: inline; */
+    float: left;
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-content p{
+    font-size: 50px;
+}
+
+.about-content span{
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 768px){
+    .about-item {
+        height: 35vh;
+        border-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about-content p{
+        font-size: 30px;
+    }
 }

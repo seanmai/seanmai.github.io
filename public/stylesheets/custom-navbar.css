@@ -1,5 +1,5 @@
 nav .navbar{
-   transition: all 5s ease;
+   transition: all 0.5s ease;
 }
 
 .navbar-custom {
@@ -7,7 +7,7 @@ nav .navbar{
 }
 
 .navbar-brand {
-    transition: all 5s ease;
+    transition: all 0.5s ease;
 }
 
 .navbar-custom .navbar-brand{
@@ -15,7 +15,7 @@ nav .navbar{
 }
 
 .nav-link {
-    transition: all 5s ease;
+    transition: all 0.5s ease;
 }
 
 .navbar .justify-content-center .nav-link {
@@ -29,12 +29,12 @@ nav .navbar{
 }
 
 .bg-white {
-    transition: all 5s ease;
+    transition: all 0.5s ease;
     background-color: #ffffff;
     box-shadow: 0 0.8px 1px -1px #999;
     padding: 0.3rem 1rem;
 }
 
 .bg-dark {
-    transition: all 5s ease;
+    transition: all 0.5s ease;
 }
