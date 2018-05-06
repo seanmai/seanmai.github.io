@@ -145,11 +145,11 @@ body {
     transform-origin: bottom left;
 }
 
-.hover-underline-center {
+.hover-underline-center:not(.active) {
     position: relative;
     color: #ff6600;
 }
-.hover-underline-center::after {
+.hover-underline-center:not(.active)::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -161,7 +161,11 @@ body {
     transform-origin: center;
     transition: transform 0.25s ease-out;
 }
-.hover-underline-center:hover::after {
+.hover-underline-center:not(.active):hover::after {
     transform: scaleX(1);
     transform-origin: center;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid #ff6600
 }

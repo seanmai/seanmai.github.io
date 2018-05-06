@@ -1,14 +1,16 @@
 $(".about-me").on("click", function() {
     $(this).toggleClass("expand");
     $(this).toggleClass("col-lg-6");
+    $(".about-work").css({"display": "none"});  //Before timeout to disappear more cleanly
     setTimeout(function () {
-        $(".about-item").toggleClass("hover-underline-animation");
+        $(".about-item").toggleClass("hover-underline-right");
         if($(".about-content").css("visibility")!="hidden"){
             $(".about-content").css({"visibility": "hidden", "opacity": "0"});
             $(".about-me-expanded").css({"visibility": "visible", "opacity": "1"});
         } else{
             $(".about-content").css({"visibility": "visible", "opacity": "1"});
             $(".about-me-expanded").css({"visibility": "hidden", "opacity": "0"});
+            $(".about-work").css({"display": "flex"});
         }
     }, 300);
 });
