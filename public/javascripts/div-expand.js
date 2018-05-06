@@ -2,6 +2,7 @@ $(".about-me").on("click", function() {
     $(this).toggleClass("expand");
     $(this).toggleClass("col-lg-6");
     setTimeout(function () {
+        $(".about-item").toggleClass("hover-underline-animation");
         if($(".about-content").css("visibility")!="hidden"){
             $(".about-content").css({"visibility": "hidden", "opacity": "0"});
             $(".about-me-expanded").css({"visibility": "visible", "opacity": "1"});
