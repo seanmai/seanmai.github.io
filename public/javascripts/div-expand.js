@@ -16,8 +16,8 @@ $(".about-me").on("click", function() {
 });
 
 // $(".about-work").on("click", function() {
-//     var scroll = $(window).scrollTop();
-//     $(".about-work").toggleClass("expand");
+//     // var scroll = $(window).scrollTop();
+//     // $(".about-work").toggleClass("expand");
 //     $(".about-work").toggleClass("col-lg-6");
 //     setTimeout(function () {
 //         $(".about-work").animate({"top": scroll, "left": "0", "position": "absolute", "height": "100vh"});

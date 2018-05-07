@@ -135,6 +135,7 @@ body {
 .expand {
     position: absolute;
     z-index: 5;
+    width: 100%;
 }
 
 .hover-underline-right {
@@ -181,4 +182,11 @@ body {
 
 .nav-link.active {
     border-bottom: 2px solid #ff6600
+}
+
+.footer {
+    background-color: #343a40;
+    height: 15vh;
+    color: white;
+    font-size: 40px;
 }
