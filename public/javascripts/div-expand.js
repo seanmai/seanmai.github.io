@@ -28,15 +28,8 @@ function openAboutMe() {
 
 function toggleAboutWork(){
     event.preventDefault();
-    if(window.innerWidth <= 768){
-        var navHeight = $(".navbar-light").outerHeight()-$(".navbar-collapse").outerHeight() ||  $(".navbar-custom").outerHeight()-43-$(".navbar-collapse").outerHeight();
-    } else {
-        var navHeight = $(".navbar-light").outerHeight() || $(".navbar-custom").outerHeight()-38.6;
-    }
+    var navHeight = $(".navbar-light").outerHeight() || $(".navbar-custom").outerHeight()-38.6;
 
-    $("html, body").animate({
-        scrollTop: ($("#workSection").offset().top)-navHeight
-    }, 250);
     $(".about-work").toggleClass("expand-width");
     $(".about-work").toggleClass("col-lg-6");
     $(".about-me").css({"display": "none"});
@@ -53,6 +46,9 @@ function toggleAboutWork(){
             $("body").css("overflow", "visible");
         }
     }, 350);
+    $("html, body").animate({
+        scrollTop: ($("#workSection").offset().top)-navHeight
+    }, 250);
 }
 
 function openAboutWork(){
@@ -65,6 +61,5 @@ function openAboutWork(){
             $(".about-content").css({"visibility": "hidden", "opacity": "0"});
             $(".about-work-expanded").css({"visibility": "visible", "opacity": "1"});
             $("body").css("overflow", "hidden");
-
     }, 350);
 }

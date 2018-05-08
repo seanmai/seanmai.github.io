@@ -24,7 +24,7 @@ function setBindings(){
         } else {
             var navHeight = $(".navbar-light").outerHeight() || $(".navbar-custom").outerHeight()-38.6;
         }
-
+        
         $("html, body").animate({
             scrollTop: ($("#" + sectionId).offset().top)-navHeight
         }, 500);
