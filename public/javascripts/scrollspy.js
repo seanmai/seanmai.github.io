@@ -1,6 +1,6 @@
 $(document).ready(function(){
     setBindings();
-    $('body').scrollspy({target: ".navbar", offset: 150});
+    $('body').scrollspy({target: ".navbar", offset: 200});
     var navScrollspy = setInterval(function(){
         if($(".about-me").hasClass("expand-width")){
             $(".nav-work").removeClass("active");
@@ -24,21 +24,29 @@ function setBindings(){
         } else {
             var navHeight = $(".navbar-light").outerHeight() || $(".navbar-custom").outerHeight()-38.6;
         }
-        if($(".about-work-expanded").css("visibility")=="visible"){   //Collapsing expanded sections
-            toggleAboutWork();
-        } else if ($(".about-me-expanded").css("visibility")=="visible") {
-            toggleAboutMe();
-        }
 
-        setTimeout(function() {
-        $("html, body").animate({
-            scrollTop: ($("#" + sectionId).offset().top)-navHeight
-        }, 500);
+        var timeout = 0;
         if(sectionId == "aboutSection"){
-            openAboutMe();
+            if($(".about-work-expanded").css("visibility")=="visible"){   //Collapsing expanded sections
+                timeout = 700;
+                toggleAboutWork();
+            }
+            setTimeout(function(){
+                openAboutMe();
+            }, timeout);
         } else if (sectionId === "workSection") {
-            openAboutWork();
+            if($(".about-me-expanded").css("visibility")=="visible"){   //Collapsing expanded sections
+                timeout = 400;
+                toggleAboutMe();
+            }
+            setTimeout(function(){
+                openAboutWork();
+            }, timeout);
         }
-        }, 350);
+        setTimeout(function(){
+            $("html, body").animate({
+                scrollTop: ($("#" + sectionId).offset().top)-navHeight
+            }, 500);
+        }, timeout);
     });
 };
