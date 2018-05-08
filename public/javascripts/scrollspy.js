@@ -19,12 +19,18 @@ function setBindings(){
     $(".nav-item").click(function(event){
         event.preventDefault();
         var sectionId = event.currentTarget.id + "Section";
-        if(window.innerWidth <= 768){
+        if(window.innerWidth <= 768){   //Adjusting navbar height for different media view sizes
             var navHeight = $(".navbar-light").outerHeight()-$(".navbar-collapse").outerHeight() ||  $(".navbar-custom").outerHeight()-43-$(".navbar-collapse").outerHeight();
         } else {
             var navHeight = $(".navbar-light").outerHeight() || $(".navbar-custom").outerHeight()-38.6;
         }
-        
+        if($(".about-work-expanded").css("visibility")=="visible"){   //Collapsing expanded sections
+            toggleAboutWork();
+        } else if ($(".about-me-expanded").css("visibility")=="visible") {
+            toggleAboutMe();
+        }
+
+        setTimeout(function() {
         $("html, body").animate({
             scrollTop: ($("#" + sectionId).offset().top)-navHeight
         }, 500);
@@ -33,5 +39,6 @@ function setBindings(){
         } else if (sectionId === "workSection") {
             openAboutWork();
         }
+        }, 350);
     });
 };

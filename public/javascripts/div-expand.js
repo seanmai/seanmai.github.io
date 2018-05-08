@@ -57,9 +57,8 @@ function openAboutWork(){
     $(".about-me").css({"display": "none"});
     setTimeout(function () {
         $(".about-work").addClass("expand-height");
-
-            $(".about-content").css({"visibility": "hidden", "opacity": "0"});
-            $(".about-work-expanded").css({"visibility": "visible", "opacity": "1"});
-            $("body").css("overflow", "hidden");
+        $(".about-content").css({"visibility": "hidden", "opacity": "0"});
+        $(".about-work-expanded").css({"visibility": "visible", "opacity": "1"});
+        $("body").css("overflow", "hidden");
     }, 350);
 }
