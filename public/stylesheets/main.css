@@ -1,3 +1,12 @@
+.temp {
+    background-image: url("http://3tsll33cscvk11pae33oze51-wpengine.netdna-ssl.com/wp-content/uploads/2016/12/instagram-new-york-city-water-street.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+}
+
 body {
     /* padding-top: 92px; */
 }
@@ -61,7 +70,7 @@ body {
 
 }
 
-.about-item:not(.expand):hover{
+.about-item:not(.expand-width):hover{
     background-color: #ddd;
 }
 .about-item:hover{

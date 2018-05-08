@@ -2,10 +2,14 @@ $(document).ready(function(){
     setBindings();
     $('body').scrollspy({target: ".navbar", offset: 150});
     var navScrollspy = setInterval(function(){
-        if($(".about-me").hasClass("expand")){
+        if($(".about-me").hasClass("expand-width")){
             $(".nav-work").removeClass("active");
         } else if ($(".nav-me").hasClass("active") && !$(".nav-work").hasClass("active")){
             $(".nav-work").addClass("active");
+        } else if ($(".about-work").hasClass("expand-width")){
+            $(".nav-me").removeClass("active");
+        } else if ($(".nav-work").hasClass("active") && !$(".nav-me").hasClass("active")){
+            $(".nav-me").addClass("active");
         }
     }, 100);
 });
