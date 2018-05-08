@@ -87,7 +87,7 @@ body {
     transition: all 0.5s ease;
 }
 
-.about-me-expanded{
+.about-expanded{
     position: absolute;
     z-index: 1;
     visibility: hidden;
@@ -103,7 +103,7 @@ body {
     margin-bottom: 40px;
 }
 
-.about-me-expanded p{
+.about-expanded p{
     font-size: 28px;
 }
 
@@ -132,10 +132,18 @@ body {
     }
 }
 
-.expand {
+.expand-width {
     position: absolute;
-    z-index: 5;
+    z-index: 50;
     width: 100%;
+}
+
+.expand-height{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
 }
 
 .hover-underline-right {
