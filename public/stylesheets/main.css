@@ -83,8 +83,6 @@ body {
     cursor: pointer;
 }
 
-
-
 .about-content p{
     font-size: 50px;
     font-weight: 700;
@@ -138,9 +136,12 @@ body {
 
 .about-work-item {
     height: 33%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
     background-color: #ddd;
-    display: inline-block;
-    margin: 0;
     border: 1px solid purple;
 }
 
