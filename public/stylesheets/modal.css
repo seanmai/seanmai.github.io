@@ -1,0 +1,10 @@
+/* .modal-body .close {
+    margin-bottom: 15px;
+} */
+
+.modal-body .btn {
+    background-color: #343a40;
+    color: white;
+    width: 100%;
+    letter-spacing: 2px;
+}

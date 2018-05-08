@@ -180,13 +180,35 @@ body {
     transform-origin: center;
 }
 
-.nav-link.active {
-    border-bottom: 2px solid #ff6600
-}
-
 .footer {
     background-color: #343a40;
     height: 15vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
     color: white;
-    font-size: 40px;
+    padding: 0 75px;
+
+}
+#footer-brand {
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.footer .footer-info {
+    font-size: 14px;
+}
+
+.footer .footer-icons {
+    margin-left: auto;
+    font-size: 25px;
+}
+
+.footer .footer-icons a{
+    margin: 0 5px;
+    color: inherit;
+}
+
+.footer .footer-icons .fa-envelope {
+    cursor: pointer;
 }

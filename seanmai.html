@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/css?family=Noto+Serif:300,400,500,700" rel="stylesheet">
         <link rel="stylesheet" href="public/stylesheets/main.css">
         <link rel="stylesheet" href="public/stylesheets/custom-navbar.css">
+        <link rel="stylesheet" href="public/stylesheets/modal.css">
     </head>
     <body>
         <nav class="navbar fixed-top navbar-dark navbar-expand-md bg-dark justify-content-center navbar-custom">
@@ -29,11 +30,36 @@
                 </ul>
                 <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link nav-link-right" href="#">Contact Me <strong style="font-size: 19px">+</strong></a>
+                        <a class="nav-link nav-link-right" href="" data-toggle="modal" data-target="#emailModal">Contact Me <strong style="font-size: 19px">+</strong></a>
                     </li>
                 </ul>
             </div>
         </nav>
+
+        <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button> -->
+                        <form method="post">
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="name" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" rows="8" cols="80" placeholder="Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn">SUBMIT</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <div id="homeSection" class="home">
             <div class="dim"></div>
@@ -69,12 +95,16 @@
         </div>
 
         <div class="footer">
-            <i class="fab fa-github"></i>
-            <i class="fab fa-linkedin-in"></i>
-            <i class="fab fa-spotify"></i>
-
-
-
+            <div class="footer-info">
+                <span id="footer-brand">&#60;S/M></span> <i class="far fa-copyright"></i> 2018 Sean Mai
+            </div>
+            <div class="footer-icons">
+                <a href="https://www.linkedin.com/in/sean-mai-a22612161/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/seanmai"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/seanmai/"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-spotify"></i></a>
+                <i class="far fa-envelope" data-toggle="modal" data-target="#emailModal"></i>
+            </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

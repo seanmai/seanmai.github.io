@@ -16,6 +16,7 @@ nav .navbar{
 
 .nav-link {
     transition: all 0.5s ease;
+    outline: 0;
 }
 
 .navbar .justify-content-center .nav-link {
@@ -37,4 +38,8 @@ nav .navbar{
 
 .bg-dark {
     transition: all 0.5s ease;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid #ff6600
 }
