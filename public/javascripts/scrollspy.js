@@ -25,14 +25,7 @@ function setBindings(){
             scrollTop: ($("#" + sectionId).offset().top)-navHeight
         }, 500);
         if(sectionId == "aboutSection"){
-            $(".about-me").addClass("expand");
-            $(".about-me").removeClass("col-lg-6");
-            $(".about-work").css({"display": "none"});
-            setTimeout(function () {
-                $(".about-item").removeClass("hover-underline-right");
-                $(".about-content").css({"visibility": "hidden", "opacity": "0"});
-                $(".about-me-expanded").css({"visibility": "visible", "opacity": "1"});
-            }, 300);
+            openAboutMe();
         } else if (sectionId === "workSection") {
 
         }
