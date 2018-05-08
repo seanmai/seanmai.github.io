@@ -21,6 +21,7 @@ body {
     background-size: cover;
     display: block;
     float: left;
+    z-index: -2;
 }
 
 .placeholder{
@@ -38,8 +39,12 @@ body {
 }
 
 .home-content {
-    height:100%;
+    height:100vh;
     width:100%;
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,6 +53,7 @@ body {
     font-size: 80px;
     font-weight: 200;
     font-family: 'Noto Serif', serif;
+
 }
 
 .about {
