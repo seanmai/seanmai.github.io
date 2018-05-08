@@ -1,5 +1,6 @@
 $(document).ready(function(){
     setBindings();
+    setCarets();
     $('body').scrollspy({target: ".navbar", offset: 200});
     var navScrollspy = setInterval(function(){
         if($(".about-me").hasClass("expand-width")){
@@ -13,7 +14,6 @@ $(document).ready(function(){
         }
     }, 100);
 });
-
 
 function setBindings(){
     $(".nav-item").click(function(event){
@@ -35,18 +35,39 @@ function setBindings(){
                 openAboutMe();
             }, timeout);
         } else if (sectionId === "workSection") {
-            if($(".about-me-expanded").css("visibility")=="visible"){   //Collapsing expanded sections
+            if($(".about-me-expanded").css("visibility")=="visible"){
                 timeout = 400;
                 toggleAboutMe();
             }
             setTimeout(function(){
                 openAboutWork();
             }, timeout);
+        } else if (sectionId === "homeSection") {
+            if($(".about-work-expanded").css("visibility")=="visible"){
+                toggleAboutWork();
+            } else if($(".about-me-expanded").css("visibility")=="visible"){
+                toggleAboutMe();
+            }
         }
         setTimeout(function(){
             $("html, body").animate({
                 scrollTop: ($("#" + sectionId).offset().top)-navHeight
             }, 500);
         }, timeout);
+    });
+};
+
+function setCarets(){
+    $("#caret-down").click(function(event){
+        event.preventDefault();
+        if(window.innerWidth <= 768){   //Adjusting navbar height for different media view sizes
+            var navHeight = $(".navbar-light").outerHeight()-$(".navbar-collapse").outerHeight() ||  $(".navbar-custom").outerHeight()-43-$(".navbar-collapse").outerHeight();
+        } else {
+            var navHeight = $(".navbar-light").outerHeight() || $(".navbar-custom").outerHeight()-38.6;
+        }
+        event.preventDefault();
+        $("html, body").animate({
+            scrollTop: ($("#aboutSection").offset().top)-navHeight
+        }, 500);
     });
 };
