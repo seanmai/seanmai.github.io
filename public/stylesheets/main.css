@@ -56,11 +56,6 @@ body {
 
 }
 
-.home-content p span {
-    will-change: opacity, filter;
-    opacity: 0;
-    filter: blur(0px);
-}
 
 .about {
     display: block;
@@ -211,11 +206,11 @@ body {
 
 .footer {
     background-color: #343a40;
-    height: 15vh;
+    height: 10vh;
     width: 100%;
     display: flex;
     align-items: center;
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
     padding: 0 75px;
 
 }
@@ -231,6 +226,10 @@ body {
 .footer .footer-icons {
     margin-left: auto;
     font-size: 25px;
+}
+
+.footer-icons i:hover{
+    color: #fff;
 }
 
 .footer .footer-icons a{
