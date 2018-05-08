@@ -56,6 +56,12 @@ body {
 
 }
 
+.home-content p span {
+    will-change: opacity, filter;
+    opacity: 0;
+    filter: blur(0px);
+}
+
 .about {
     display: block;
     height: 60vh;
