@@ -26,11 +26,8 @@ function setBindings(){
         }, 500);
         if(sectionId == "aboutSection"){
             openAboutMe();
-            console.log("clicked about section");
         } else if (sectionId === "workSection") {
             openAboutWork();
-            console.log("clicked work section");
-
         }
     });
 };
