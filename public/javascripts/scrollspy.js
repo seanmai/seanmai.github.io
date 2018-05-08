@@ -60,11 +60,8 @@ function setBindings(){
 function setCarets(){
     $("#caret-down").click(function(event){
         event.preventDefault();
-        if(window.innerWidth <= 768){   //Adjusting navbar height for different media view sizes
-            var navHeight = $(".navbar-light").outerHeight()-$(".navbar-collapse").outerHeight() ||  $(".navbar-custom").outerHeight()-43-$(".navbar-collapse").outerHeight();
-        } else {
-            var navHeight = $(".navbar-light").outerHeight() || $(".navbar-custom").outerHeight()-38.6;
-        }
+
+            var navHeight = $(".navbar-light").outerHeight() || $(".navbar-custom").outerHeight()-42;
         event.preventDefault();
         $("html, body").animate({
             scrollTop: ($("#aboutSection").offset().top)-navHeight

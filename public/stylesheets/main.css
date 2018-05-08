@@ -237,6 +237,9 @@ body {
 }
 
 @media only screen and (max-width: 768px){
+    .home-content {
+        font-size: 36px;
+    }
     .about-item {
         min-height: 35vh;
         border-top: 0px;

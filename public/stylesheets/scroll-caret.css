@@ -1,59 +1,68 @@
 #caret-down a {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  z-index: -1;
-  display: inline-block;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  color: #fff;
-  font : normal 400 20px/1 'Josefin Sans', sans-serif;
-  letter-spacing: .1em;
-  text-decoration: none;
-  transition: opacity .3s;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    padding-top: 40px;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fff;
+    font : normal 400 20px/1 'Josefin Sans', sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
 }
 
-#caret-down a {
-  padding-top: 40px;
 }
-#caret-down a span {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-animation: fade 1.5s infinite;
-  animation: fade 1.5s infinite;
-  box-sizing: border-box;
+#caret-down a #caret-background {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 48px;
+    height: 60px;
+    margin-left: -12px;
+    border-radius: 0 0 20px 20px;
 }
+
+#caret-down a #caret-background span{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: fade 1.5s infinite;
+    animation: fade 1.5s infinite;
+    box-sizing: border-box;
+}
+
 @-webkit-keyframes fade {
-  0% {
-    -webkit-transform: rotate(-45deg) translate(0, 0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
-    opacity: 0;
-  }
+    0% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
 }
 @keyframes fade {
-  0% {
-    transform: rotate(-45deg) translate(0, 0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(-45deg) translate(-20px, 20px);
-    opacity: 0;
-  }
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
 }
