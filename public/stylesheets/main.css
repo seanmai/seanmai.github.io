@@ -136,6 +136,26 @@ textarea {
     overflow:auto;
 }
 
+.about-work-header {
+    font-size: 32px;
+    font-weight: 400;
+    color: #fff;
+    background: #000;
+    letter-spacing: 3px;
+}
+
+.about-work-header span{
+    font-size: 32px;
+    font-weight: 100;
+    color: #fff;
+    float: right;
+    transition: all 0.35s ease;
+}
+.about-work-header:hover span{
+    opacity: 0.5;
+}
+
+
 .about-work-item {
     background-position:center center;
     background-repeat:no-repeat;
@@ -295,6 +315,12 @@ textarea {
     }
     .about-me-expanded p{
         font-size: 16px;
+    }
+    .about-work-header {
+        font-size: 24px;
+    }
+    .about-work-header span{
+        font-size: 24px;
     }
     .about-work-item-description{
         opacity: 1;
