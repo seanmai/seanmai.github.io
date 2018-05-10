@@ -11,6 +11,10 @@ body {
     /* padding-top: 92px; */
 }
 
+textarea {
+    min-height: 206px;
+}
+
 .home {
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
@@ -133,14 +137,40 @@ body {
 }
 
 .about-work-item {
-    height: 33%;
+    background-image: url("https://farm3.staticflickr.com/2827/10384422264_d9c7299146.jpg");
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    float: left;
+    position: relative;
+    width: 25%;
+    padding-bottom: 25%;    /* width==padding-bottom creates an aspect ratio of 1:1*/
+    overflow:hidden;
+    transition: all 0.35s ease;
+}
+
+.about-work-item:hover {
+    opacity: 0.8;
+}
+
+.about-work-item-description {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    padding: 5%;
+    color: #fff;
+    font-size: 44px;
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.35s ease;
+}
 
-    background-color: #ddd;
-    border: 1px solid purple;
+.about-work-item:hover .about-work-item-description {
+    opacity: 1;
 }
 
 .expand-width {
