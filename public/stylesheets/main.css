@@ -214,6 +214,36 @@ textarea {
     opacity: 1;
     transition: max-height 0.75s linear, opacity 0.35s ease; /* background-color 0.35s ease 0.2s; */
 }
+.about-work-item:hover .about-work-item-description .test{
+    max-height: 1000px;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    transition: max-height 0.75s linear, opacity 0.35s ease, background-color 0.35s ease 0.2s;
+}
+.about-work-item:hover .about-work-item-description .test2{
+    max-height: 1000px;
+    background-color: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+    transition: max-height 0.75s linear, opacity 0.35s ease, background-color 0.35s ease 0.2s;
+}
+.about-work-item:hover .about-work-item-description .test3{
+    max-height: 1000px;
+    background-color: rgba(125, 125, 125, 0.4);
+    opacity: 1;
+    transition: max-height 0.75s linear, opacity 0.35s ease, background-color 0.35s ease 0.2s;
+}
+.about-work-item:hover .about-work-item-description .test4{
+    max-height: 1000px;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    transition: max-height 0.75s linear, opacity 0.35s ease, background-color 0.35s ease;
+}
+.about-work-item:hover .about-work-item-description .test5{
+    max-height: 1000px;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    transition: max-height 0.75s linear, opacity 0.35s ease, background-color 0.35s ease 0.2s;
+}
 
 .expand-width {
     position: absolute;
