@@ -206,7 +206,6 @@ textarea {
     font-weight: 400;
     color: #ddd;
     transition: max-height 0.75s linear,  opacity 0.35s ease;
-
 }
 
 .about-work-item:hover .about-work-item-description span{
