@@ -198,51 +198,21 @@ textarea {
 }
 
 .about-work-item-description span{  /* Pop up description */
-    padding: 5px;
+    padding: 20px;
     opacity: 0;
     display: block;
-    max-height: 0;
-    font-size: 28px;
-    font-weight: 400;
+    height: 0;
+    font-size: 24px;
+    font-weight: 200;
     color: #fff;
-    transition: max-height 0.25s ease, opacity 0.35s ease;
+    transition: height 0.25s ease, opacity 0.35s ease;
 }
 
 .about-work-item:hover .about-work-item-description span{
-    max-height: 1000px;
-    /* background-color: rgba(255, 255, 255, 0.4); */
-    opacity: 1;
-    transition: max-height 0.75s linear, opacity 0.35s ease; /* background-color 0.35s ease 0.2s; */
-}
-.about-work-item:hover .about-work-item-description .test{
-    max-height: 1000px;
+    height: 250px;
     background-color: rgba(0, 0, 0, 0.4);
     opacity: 1;
-    transition: max-height 0.75s linear, opacity 0.35s ease, background-color 0.35s ease 0.2s;
-}
-.about-work-item:hover .about-work-item-description .test2{
-    max-height: 1000px;
-    background-color: rgba(255, 255, 255, 0.4);
-    opacity: 1;
-    transition: max-height 0.75s linear, opacity 0.35s ease, background-color 0.35s ease 0.2s;
-}
-.about-work-item:hover .about-work-item-description .test3{
-    max-height: 1000px;
-    background-color: rgba(125, 125, 125, 0.4);
-    opacity: 1;
-    transition: max-height 0.75s linear, opacity 0.35s ease, background-color 0.35s ease 0.2s;
-}
-.about-work-item:hover .about-work-item-description .test4{
-    max-height: 1000px;
-    background-color: rgba(0, 0, 0, 0.4);
-    opacity: 1;
-    transition: max-height 0.75s linear, opacity 0.35s ease, background-color 0.35s ease;
-}
-.about-work-item:hover .about-work-item-description .test5{
-    max-height: 1000px;
-    background-color: rgba(0, 0, 0, 0.4);
-    opacity: 1;
-    transition: max-height 0.75s linear, opacity 0.35s ease, background-color 0.35s ease 0.2s;
+    transition: height 0.2s linear, opacity 0.35s ease, background-color 0.35s ease 0.25s;
 }
 
 .expand-width {
@@ -365,6 +335,11 @@ textarea {
         font-size: 24px;
     }
     .about-work-item-description{
+        opacity: 1;
+    }
+    .about-work-item-description span{
+        height: 275px;
+        background-color: rgba(0, 0, 0, 0.4);
         opacity: 1;
     }
     .footer {
