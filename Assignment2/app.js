@@ -73,6 +73,7 @@ function cell_click_cb(g, cell_div, ind) {
     stop_timer(g);
   }
   else if (g.getStatus().done === true){
+    document.querySelector(".game-time").textContent = g.t;
     document.querySelector("#overlay").classList.toggle("active");
     document.querySelector("#overlay-win").style.display = "flex";
     stop_timer(g);
