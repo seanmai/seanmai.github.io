@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Minesweeper</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="timer">000</div>
+    <div id="remainingMines"><span id="remaining"></span>&nbsp;mines remaining</div>
+    <div class="difficultyMenu">
+      <div class="difficultyButton" data-size="8x8x10">Normal</div>
+      <div class="difficultyButton" data-size="16x16x40">Hard</div>
+    </div>
+    <div class="gridwrapper">
+      <div class="grid"></div>
+    </div>
+    <div id="overlay">
+      <div id="overlay-win">
+        <p class="big glow">Congratulations, you won!!!</p>
+        <p class="darker">It took you <span class="game-time">0</span> moves.</p>
+        <p class="darker">Click anywhere to start a new game.
+      </div>
+      <div id="overlay-lose">
+        <p class="big glow">You lost!!!</p>
+        <p class="darker">Click anywhere to start a new game.
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

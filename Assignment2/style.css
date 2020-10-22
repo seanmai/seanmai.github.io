@@ -1,0 +1,250 @@
+* {
+  font-family: Impact;
+  font-size: 1.3rem;
+}
+
+body {
+  background: #86b2ba;
+}
+
+.cell {
+  background-image: url(minesweeper_cell.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: auto;
+  height: auto;
+
+  border: none;
+  transition:.25s;
+  transform: rotateY(180deg);
+
+  animation: fadeIn 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.cell.marked {
+  background-image: url(minesweeper_flag.png);
+  transform: rotateY(0deg);
+}
+
+.cell.shown {
+  background-image: url(minesweeper_empty_cell.png);
+  transform: rotateY(0deg);
+}
+
+.cell.mine {
+  background-image: url(minesweeper_mine.png);
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.cell.adjacent-1 {
+  background-image: url(minesweeper_1.png);
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.cell.adjacent-2 {
+  background-image: url(minesweeper_2.png);
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.cell.adjacent-3 {
+  background-image: url(minesweeper_3.png);
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.cell.adjacent-4 {
+  background-image: url(minesweeper_4.png);
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.cell.adjacent-5 {
+  background-image: url(minesweeper_5.png);
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.cell.adjacent-6 {
+  background-image: url(minesweeper_6.png);
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.cell.adjacent-7 {
+  background-image: url(minesweeper_7.png);
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.cell.adjacent-8 {
+  background-image: url(minesweeper_8.png);
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  border-radius: 10px;
+  padding:5px;
+  width: calc(70vh);
+}
+
+.grid > div::before {
+  content: "";
+  padding-bottom: 100%;
+  display: block;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+}
+
+.difficultyMenu, #timer, #remainingMines {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5em;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.difficultyButton {
+  padding: 5px 0.5em ;
+  border: 0px solid gray;
+  background-color: rgba(128, 128, 128, 0.233);
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 0.5em;
+  font-size:1em;
+}
+
+.difficultyButton:hover {
+  color: white;
+  background: black;
+}
+
+.gridwrapper {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: 0s;
+  transition: all 0s;
+
+  visibility: hidden;
+  animation: fadeOut 0.5s;
+  animation-fill-mode: forwards;
+}
+#overlay * {
+  pointer-events: none;
+}
+
+#overlay.active {
+  visibility: visible;
+  animation: fadeIn 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#overlay-win, #overlay-lose {
+  padding: 1em;
+  padding-left: 4em;
+  padding-right: 4em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 20px black;
+  display: none;
+}
+
+#overlay-win p, #overlay-lose p {
+  text-align: center;
+  font-size: 1em;
+}
+
+p.big {
+  font-size: 2em !important;
+}
+
+p.darker {
+  color: #aaa;
+}
+
+p.glow {
+  animation: glow 1s infinite alternate-reverse;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 20px rgb(255, 255, 0); }
+  to { text-shadow: 0 0 20px rgb(255, 115, 0); }
+}
+
+#overlay.active #overlayin {
+  opacity: 0;
+  animation: spinIn 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#overlayin * {
+  margin: 0px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes spinIn {
+  from { transform: scale(0.1) rotateX(0deg) ; opacity: 0; }
+  to { transform: scale(1) rotateX(360deg) ;  opacity: 1; }
+}
+
+.status {
+  margin-top: 5px;
+  text-align: center;
+  color: gray;
+}
+
+.gameMenu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5em;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#timer {
+  font-size: 2em;
+  margin-bottom: 0.1em;
+}
