@@ -86,8 +86,7 @@ function cell_right_click_cb(g, cell_div, ind) {
   g.mark(row, col);
   render(g);
 
-  minesLeft = document.querySelector("#remaining").textContent;
-  document.querySelector("#remaining").textContent = parseInt(minesLeft)-1;
+  document.querySelector("#remaining").textContent = g.nmines - g.nmarked;
 }
 
 function button_cb(g, cols, rows, mines) {
