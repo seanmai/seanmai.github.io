@@ -18,6 +18,8 @@ function prepare_dom(g) {
     let pressTimer;
     cell.addEventListener("mousedown", (e) => {
       e.preventDefault();
+      e.stopPropagation();
+      e.cancelBubble = true;
       pressTimer = window.setTimeout(() => {
         cell_right_click_cb(g, cell, i)
       }, 750);
