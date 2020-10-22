@@ -17,10 +17,11 @@ function prepare_dom(g) {
 
     let pressTimer;
     cell.addEventListener("mousedown", (e) => {
+      e.preventDefault();
       pressTimer = window.setTimeout(() => {
         cell_right_click_cb(g, cell, i)
       }, 750);
-    });
+    }, false);
     cell.addEventListener("mouseup", (e) => {
       clearTimeout(pressTimer);
     });
@@ -128,9 +129,6 @@ function main() {
 
   prepare_dom(game);
   button_cb(game, 8, 8, 10);
-
-  console.log(game.getRendering().join("\n"));
-  console.log(game.getStatus());
 }
 
 let MSGame = (function(){
